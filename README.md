@@ -1,24 +1,9 @@
 <html>
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
+<head>
+<style>
+body {font-family: "Lato", sans-serif;}
 
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+/* Style the tab */
 div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
@@ -34,6 +19,7 @@ div.tab button {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    font-size: 17px;
 }
 
 /* Change background color of buttons on hover */
@@ -53,42 +39,52 @@ div.tab button.active {
     border: 1px solid #ccc;
     border-top: none;
 }
-function openCity(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
+</style>
+</head>
+<body>
 
-    // Get all elements with class="tabcontent" and hide them
+<p>Click on the buttons inside the tabbed menu:</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Dom')">Dom</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'Test')">Test</button>
+</div>
+<div id="Test" class="tabcontent">
+  <h3>T</h3>
+  <p>Test</p>
+</div>
+<div id="Dom" class="tabcontent">
+  <h3>Dominick</h3>
+  <p>Dominick is da coolest.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
-
-    // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-<head>
-<title> Making Webpage </title>
-</head>
-<style>
-body
-{
-	background-color: #40498c;
-}
-</style>
-<body>
-<h1> My Cool Website </h1>
-<div id="mydivheader">Testing</div>
-<p>Move</p>
-<p>this</p>
-<p>DIV<p>
-</div>
+</script>
+     
 </body>
-
 </html>
