@@ -1,0 +1,144 @@
+<html>
+<head>
+<style>
+body {font-family: "Lato", sans-serif;}
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+<h1 style="color:black;font-family:verdana;text-align:center;">U.S.A. Info Guideline</h1>
+<h1 style="font-family:verdana;"></h1>
+<p>Click on the Country you'd like info about:</p>
+<body background="Flag.jpeg">
+</body>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Motos')">Motos</button>
+  <button class="tablinks" onclick="openCity(event, 'Etymology')">Etymology</button>
+  <button class="tablinks" onclick="openCity(event, 'Flora&Fauna')">Flora&Fauna</button>
+  <button class="tablinks" onclick="openCity(event, 'Songs')">Songs</button>
+  <button class="tablinks" onclick="openCity(event, 'Allies')">Allies</button>
+</div>
+
+<div id="Allies" class="tabcontent">
+ <h3>Allies of U.S.A.</h3>
+ <p>The United States has an established structure of foreign relations. It is a permanent member of the United Nations Security Council, and New York City is home to the United Nations Headquarters.</p>
+ <p>-Canada</p>
+ <img src="Canada.png";>
+ <p>-Australia</p>
+ <img src="Australia.png";>
+ <p>-New Zealand</p>
+ <img src="Zealand.png";>
+ <p>-The Phillipines</p>
+ <img src="Phillipines.png";>
+ <p>-Japan</p>
+ <img src="Japan.png";>
+ <p>-South Korea</p>
+ <img src="Korea.png";>
+ <p>-Israel</p>
+ <img src="Israel.png";>
+ <p>-France</p>
+ <img src="France.png";>
+ <p>-Italy</p>
+ <img src="Italy.png";>
+ <p>-Germany</p>
+ <img src="Germany.png";>
+ <p>-Spain</p>
+ <img src="Spain.png";>
+</div>
+
+<div id="Songs" class="tabcontent">
+  <h3>Official U.S.A. Anthem & March</h3>
+  <p>Anthem: The Star Spangled Banner.</p>
+ <audio controls>
+  <source src="Star Spangled Banner lyrics vocals and beautiful photos.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+ <p>March: The Stars and Stripes Forever.</p>
+ <audio controls>
+  <source src="Stars and Stripes Forever - John Philip Sousa.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+</div>
+
+<div id="Motos" class="tabcontent">
+  <h3>Traditional American Motos:</h3>
+  <img src="Murican Flag.jpg" style="width: 340px;height:228px;">
+  <p>"In God We Trust."</p>
+  <p>"E pluribus unum" (Out of many, one)</p>
+  <p>"Annuit coeptis" (He has favored our undertaking)</p>
+  <p>"Novus ordo seclorum" (New order of the ages)</p>
+</div>
+
+<div id="Etymology" class="tabcontent">
+  <h3>Etymology</h3>
+  <img src="Vespucci.jpg";>
+  <p>In 1507, the German cartographer Martin Waldseemüller produced a world map on which he named the lands of the Western Hemisphere the Americas in honor of the Italian explorer and cartographer Amerigo Vespucci (Latin: Americus Vespucius).</p>
+  <p>The first documentary evidence of the phrase "United States of America" is from a letter dated January 2, 1776, written by Stephen Moylan, Esq., George Washington's aide-de-camp and Muster-Master General of the Continental Army. Addressed to Lt. Col. Joseph Reed, Moylan expressed his wish to carry the "full and ample powers of the United States of America" to Spain to assist in the revolutionary war effort.</p>
+  <p>The short form "United States" is also standard. Other common forms are the "U.S.", the "USA", and "America". Colloquial names are the "U.S. of A." and, internationally, the "States". "Columbia", a name popular in poetry and songs of the late 18th century, derives its origin from Christopher Columbus; it appears in the name "District of Columbia".</p> 
+</div>
+
+<div id="Flora&Fauna" class="tabcontent">
+  <h3>National Flora and Fauna.</h3>
+  <p>National Bird: Bald Eagle.</p>
+  <img src="Eagle.jpg";>
+  <p>National Mammal: North American Bison.</p>
+  <img src="Bison.jpg";>
+  <p>National Flower: Rose.</p>
+  <img src="Rose.jpg";>
+  <p>National Tree: Oak Tree</p>
+  <img src="Oak.jpg";>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script> 
+</body>
+</html>
